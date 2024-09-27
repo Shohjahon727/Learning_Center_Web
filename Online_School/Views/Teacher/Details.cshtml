@@ -1,0 +1,35 @@
+﻿@using Online_School.Entities
+@model Teacher
+<form method="get">
+    <div class="border p-3 mt-4 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+        <!-- O'qituvchining rasmi -->
+        <div class="row">
+            <div class="teacher-image col-12 col-lg-3 offset-lg-1 text-center mb-3">
+                <img src="@Model.ImageUrl" alt="Teacher Image" width="100%" class="rounded">
+            </div>
+            <div class="teacher-info">
+                <h2>@Model.FullName</h2> <!-- O'qituvchining to'liq ismi -->
+                <p><strong>Subject:</strong> @Model.Subject</p> <!-- Qaysi fandan dars beradi -->
+                <p><strong>Description:</strong> @Model.Description</p> <!-- Tavsifi -->
+             </div>
+            <div class="row">
+                <div class="col-12 col-md-6 pb-1">
+                    <button type="submit"
+                            class="btn btn-primary bg-gradient  w-100 py-2 text-uppercase fw-semibold">
+                        Phone Nomber : +998-215-72-27
+                    </button>
+                </div>
+
+                <div class="col-12 col-md-6 pb-1">
+                    <a asp-action="Index" class="btn btn-primary bg-gradient  w-100 py-2 text-uppercase fw-semibold">
+                        <small>Back to home</small>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        
+           
+       
+    </div>
+</form>

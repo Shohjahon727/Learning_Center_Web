@@ -1,0 +1,38 @@
+﻿@* @using Online_School.Entities
+@model IEnumerable<Course>
+<div class="row pb-3">
+	@foreach (var product in Model)
+	{
+		<div class="col-lg-3 col-sm-6">
+			<div class="row p-2">
+				<div class="col-12 p-1 mb-0">
+					<div class="card-border-0 p-3 shadow border-top bored-5 rounded" style="text-align: center; ">
+						<img src="@product.ImageUrl" class="card-img-top rounded " alt="Responsive Image" style=" width: 250px; height: 280px; object-fit: cover;" />
+						<div class="card-body pb-0">
+							<div class="pl-1">
+								<p class="card-title h5 text-dark opacity-75 text-uppercase text-center">@product.CourseName</p>
+								<p class="card-title text-warning text-center">by <b>@product.TeacherName</b></p>
+							</div>
+							<div class="pl-1">
+								<p class="text-dark text-opacity-75 text-center mb-0">
+									List Price:
+									<span class="text-decoration-line-through">
+										@product.CoursePrice.ToString("c")
+									</span>
+								</p>
+							</div>
+							
+						</div>
+						<div>
+							<a asp-action="Details"
+							   asp-route-productId="@product.Id"
+							   class="btn btn-primary bg-gradient border-0 form-control">
+								Details
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+</div> *@

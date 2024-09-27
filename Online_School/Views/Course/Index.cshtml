@@ -1,0 +1,46 @@
+﻿@using Online_School.Entities
+@model List<Course>
+
+<div class="container">
+	<div class="row pt-4">
+		<div class="col-6">
+			<h2 class="text-primary ">Course List</h2>
+		</div>
+		<div class="col-6 text-end">
+			<a asp-controller="Course" asp-action="Create" class="btn btn-primary">
+				<i class="bi bi-plus-circle"></i> Create New Course
+			</a>
+		</div>
+	</div>
+
+	<table class="table table-bordered	table-striped">
+		<thead>
+		<tr>
+			<th>
+				Course Name
+			</th>
+			<th>
+				 Teacher Name
+			</th>
+			<th>
+				Description
+			</th>
+			<th>
+				Course Price
+			</th>
+		</tr>
+		</thead>
+		<tbody>
+			@foreach(var course in Model)
+			{
+				<tr>
+					<td>@course.CourseName</td>
+					<td>@course.TeacherName</td>	
+					<td>@course.Description</td>
+					<td>@course.CoursePrice</td>
+				</tr>
+			}
+		
+		</tbody>
+	</table>
+</div>

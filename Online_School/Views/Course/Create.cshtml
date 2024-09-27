@@ -1,0 +1,41 @@
+﻿@using Online_School.Entities
+@model Course
+
+<form method="post">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary text-center" >Create Course</h2>
+			<hr/>
+		</div>
+		<div class="mb-3 row p-1">
+			<label asp-for="CourseName" class="p-0"></label>
+			<input asp-for="CourseName" class="form-control" />
+		</div>
+		<div class="mb-3 row p-1">
+			<label asp-for="TeacherName" class="p-0"></label>
+			<input asp-for="TeacherName" class="form-control" />
+		</div>
+		<div class="mb-3 row p-1">
+			<label asp-for="Description" class="p-0"></label>
+			<input asp-for="Description" class="form-control" />
+		</div>
+		<div class="mb-3 row p-1">
+			<label asp-for="CoursePrice" class="p-0"></label>
+			<input asp-for="CoursePrice" class="form-control" />
+		</div>
+		<div class="mb-3 row p-1">
+			<label asp-for="ImageUrl">Upload Image</label>
+			<input type="file" name="Image" />
+		</div>
+		<div class="row">
+			<div class="col-6 col-md-3">
+				<button type="submit" class="btn btn-primary form-control" >Create</button>
+			</div>
+			<div class="col-6 col-md-3">
+				<a asp-controller="Course" asp-action="Index" class="btn btn-outline-secondary form-control">
+					Back to List
+				</a>
+			</div>
+		</div>
+	</div>
+</form>
